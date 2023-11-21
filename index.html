@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      body {
+        font-family: "Times New Roman", Times, serif;
+      }
+
+      .container {
+        width: 50%;
+        margin: auto;
+        box-shadow: 2px 2px 2px 3px black;
+        padding: 20px;
+      }
+
+      h3 {
+        color: rgb(0, 0, 0);
+        text-align: center;
+        text-decoration: underline;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 8px;
+      }
+
+      input {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 10px;
+        box-sizing: border-box;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+      }
+
+      th,
+      td {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+      }
+
+      th {
+        background-color: #f2f2f2;
+      }
+
+      button {
+        background-color: darkslateblue;
+        color: white;
+        padding: 10px;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <form id="doo">
+        <h3>Registration Form</h3>
+        <label for="name">Name<span style="color: red">*</span></label>
+        <input
+          required
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Name of student"
+        />
+        <label for="email">Email<span style="color: red">*</span></label>
+        <input
+          required
+          type="email"
+          id="email"
+          name="email"
+          placeholder="example@gmail.com"
+        />
+        <label for="password">Password<span style="color: red">*</span></label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          required
+          placeholder="Password"
+        />
+        <label for="dob">Date of Birth<span style="color: red">*</span></label>
+        <input type="date" id="dob" name="dob" required />
+        <input type="checkbox" id="acceptTerms" name="acceptTerms" />
+        <label for="acceptTerms">Accept Terms & Conditions</label>
+        <button type="submit">Submit</button>
+      </form>
+
+      <h2 style="text-align: center; color: darkslateblue">Entries</h2>
+      <table>
+        <thead></thead>
+        <tbody id="entries"></tbody>
+      </table>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
